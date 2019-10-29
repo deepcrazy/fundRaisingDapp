@@ -2,20 +2,16 @@
 <html>
 
 <head>
-  <title>Simple Storage Contract</title>
+  <title>Bidding Contract</title>
 </head>
 
 <body>
-  <h1>Simple Storage DApp</h1>
+  <h1>Fund Raising DApp</h1>
   <div class="controls">
     <form>
-      <!-- <p>
-          <label for="private-key">Private Key : </label>
-          <input type="text" id="private-key" class="private-key" />
-        </p> -->
-
+      <!-- Get private key for deploying smart contract -->
       <p>
-        <label for="private-key">Beneficiary Account Key : </label>
+        <label for="private-key">Private Key : </label>
         <input type="text" id="private-key" class="private-key" />
       </p>
 
@@ -23,45 +19,47 @@
         <button class="submit">Deploy</button>
       </p>
     </form>
-    <h2>Smart Contract Interaction</h2>
-
-    <!-- <p>
-        <label for="set-uint-n">Get Beneficiary : </label>
-        <input type="text" id="set-uint-n" class="set-uint-n" />
-      </p> -->
-
-    <!-- <p>
-        <label for="set-uint-n">set uint n : </label>
-        <input type="text" id="set-uint-n" class="set-uint-n" />
-      </p> -->
-    <!-- <p>
-      <button class="set">Set</button>
-    </p> -->
-    <!-- <p>
-        <button class="get">Get</button>
-      </p> -->
-
+    <h2>Bidding Smart Contract Interaction</h2>
 
     <!-- Get the beneficiary address -->
     <p>
       <button class="getBeneficiaryAddress">Get Beneficiary Address</button>
     </p>
     <div class="get-result"></div>
-
-
-    <!-- Get item details -->
-    <p>
-      <label for="getItemDetails">Click button to get ITEM details</label>
-      <input type="text" class="itemNumber" id="itemNumber">
-      <button class="getItemNumber">Get Item</button>
-    </p>
-    <div class="get-item-result"></div>
+    <br>
 
     <!-- Register user -->
     <p>
+      <label for="registerBidder"> Click here to register &nbsp;&nbsp;&nbsp;&nbsp; </label>
       <button class="registerBidder">Register</button>
     </p>
     <div class="get-bidder-result"></div>
+    <br>
+
+    <!-- Bid on items -->
+    <form class="bitForm">
+      <p>
+        <label for="item"> Enter item </label>
+        <input type="text" class="item" id="item">
+      </p>
+      <p>
+        <label for="token"> Enter token </label>
+        <input type="text" class="token" id="token">
+      </p>
+      <p>
+        <button class="submitBid">Place Bid</button>
+      </p>
+      <div class="submitBidsResult">
+      </div>
+    </form>
+
+    <!-- Reveal Winners -->
+    <p>
+      <label for="revealWinnersLabel"> Click here to Reveal Winners </label>
+      <button class="revealWinners"> Reveal Winners</button>
+    </p>
+    <div class="get-reveal-winners-fn-result"></div>
+    <br>
 
     <!-- Get Winner address from winners array -->
     <p>
@@ -70,21 +68,7 @@
       <button class="getWinnerId">Get Winner</button>
     </p>
     <div class="get-WinnerId-result"></div>
-
-    <!-- <p>
-      <label for="increment-uint-n">increment uint n : </label>
-      <input type="text" id="increment-uint-n" class="increment-uint-n" />
-    </p> -->
-    <!-- <p>
-      <button class="increment">Increment</button>
-    </p> -->
-    <!-- <p>
-      <label for="decrement-uint-n">decrement uint n : </label>
-      <input type="text" id="decrement-uint-n" class="decrement-uint-n" />
-    </p> -->
-    <!-- <p>
-      <button class="decrement">Decrement</button>
-    </p> -->
+    <br>
   </div>
 </body>
 <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript"></script>
